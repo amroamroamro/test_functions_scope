@@ -6,8 +6,6 @@ function ret = myfcn(varargin)
                 ret = myclass.static_function(varargin{2:end});
             case myclass.p
                 ret = private_function(varargin{2:end});
-            case myclass.hs
-                ret = @myclass.static_function;
             case myclass.hsv
                 ret = @(varargin) myclass.static_function(varargin{:});
             case myclass.hp
